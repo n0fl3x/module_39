@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Галерея изображений (модуль 39)
+    </title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="gallery">
+
+        <h1 class="gallery__title">
+            Галерея изображений
+        </h1>
+        
+        <div class="gallery__controls">
+            <button type="button" class="gallery__button" id="load-images-btn">
+                Загрузить изображения
+            </button>
+        </div>
+        
+        <div class="gallery__loader" id="loader" aria-hidden="true">
+            Загружаем изображения...
+        </div>
+        
+        <div class="gallery__container" id="images-container"></div>
+
+    </div>
+    
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
