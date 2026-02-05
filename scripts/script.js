@@ -8,18 +8,35 @@ const imagesContainer = document.getElementById(IMAGES_CONTAINER_ID);
 const loadButton = document.getElementById(BUTTON_ID);
 
 
+/**
+ * Показывает элемент загрузчика.
+ * @returns {void}
+ */
 function showLoader() {
     loaderElement.style.display = "block"
 };
 
+/**
+ * Скрывает элемент загрузчика.
+ * @returns {void}
+ */
 function hideLoader() {
     loaderElement.style.display = "none"
 };
 
+/**
+ * Очищает контейнер с изображениями.
+ * @returns {void}
+ */
 function clearImagesContainer() {
     imagesContainer.innerHTML = ""
 };
 
+/**
+ * Создаёт элемент <img> с указанными свойствами.
+ * @param {string} url
+ * @returns {HTMLImageElement}
+ */
 function createImageElement(
     url
 ) {
@@ -31,6 +48,11 @@ function createImageElement(
     return img
 };
 
+/**
+ * Создаёт "обёртку" (gallery__item) для изображения.
+ * @param {string} url
+ * @returns {HTMLDivElement}
+ */
 function createGalleryItem(
     url
 ) {
@@ -43,6 +65,11 @@ function createGalleryItem(
     return item
 };
 
+/**
+ * Добавляет массив изображений в контейнер.
+ * @param {string[]} images
+ * @returns {void}
+ */
 function appendImagesToContainer(
     images
 ) {
@@ -52,6 +79,12 @@ function appendImagesToContainer(
     })
 };
 
+/**
+ * Асинхронно загружает изображения из API и отображает их.
+ * @async
+ * @returns {Promise<void>}
+ * @throws {Error}
+ */
 async function loadImages() {
     try {
         showLoader();
@@ -75,6 +108,11 @@ async function loadImages() {
     }
 };
 
+/**
+ * Обработчик клика по кнопке загрузки изображений.
+ * @param {MouseEvent} event
+ * @returns {void}
+ */
 function handleLoadImagesClick(
     event
 ) {
